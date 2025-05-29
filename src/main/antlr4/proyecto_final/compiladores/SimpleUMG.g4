@@ -3,7 +3,6 @@ grammar SimpleUMG;
 @header {
 package proyecto_final.compiladores;
 }
-
 // Regla inicial explícita (para evitar problemas con StartContext)
 start: programa EOF;
 
