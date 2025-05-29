@@ -35,26 +35,4 @@ retorno: RETURN expresion ';';
 
 llamada: IDENT '(' (expresion (',' expresion)*)? ')';
 
-expresion: '(' expresion ')'                                  #parenExpr
-         | op=('-'|'!') expresion                             #unariaExpr
-         | izquierda=expresion op=('*'|'/') derecha=expresion #multiplicativaExpr
-         | izquierda=expresion op=('+'|'-') derecha=expresion #aditivaExpr
-         | izquierda=expresion op=('<'|'<='|'>'|'>=') derecha=expresion #relacionalExpr
-         | izquierda=expresion op=('=='|'!=') derecha=expresion #igualdadExpr
-         | izquierda=expresion '&&' derecha=expresion         #andExpr
-         | izquierda=expresion '||' derecha=expresion         #orExpr
-         | llamada                                            #llamadaExpr
-         | IDENT                                              #identExpr
-         | literal                                            #literalExpr
-         ;
-
-literal: NUMERO | FLOAT_NUM | CADENA | BOOLEANO;
-
-tipo: INT | FLOAT | BOOL | STRING;
-
-// Reglas del lexer
-NUMERO: [0-9]+;
-FLOAT_NUM: [0-9]+ '.' [0-9]+;
-BOOLEANO: 'true' | 'false';
-CADENA: '"' .*? '"';
 
