@@ -51,3 +51,10 @@ expresion: '(' expresion ')'                                  #parenExpr
 literal: NUMERO | FLOAT_NUM | CADENA | BOOLEANO;
 
 tipo: INT | FLOAT | BOOL | STRING;
+
+// Reglas del lexer
+NUMERO: [0-9]+;
+FLOAT_NUM: [0-9]+ '.' [0-9]+;
+BOOLEANO: 'true' | 'false';
+CADENA: '"' .*? '"';
+
