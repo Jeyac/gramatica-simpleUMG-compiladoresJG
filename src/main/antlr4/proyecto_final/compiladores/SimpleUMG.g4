@@ -58,3 +58,27 @@ FLOAT_NUM: [0-9]+ '.' [0-9]+;
 BOOLEANO: 'true' | 'false';
 CADENA: '"' .*? '"';
 
+// Palabras reservadas
+INT: 'int';
+FLOAT: 'float';
+BOOL: 'bool';
+STRING: 'string';
+PROGRAMA: 'programa';
+LIB: 'lib';
+IF: 'if';
+ELSE: 'else';
+WHILE: 'while';
+RETURN: 'return';
+
+// Operadores
+OPARIT: ('+'|'-'|'*'|'/');
+OPREL: ('<'|'<='|'>'|'>=');
+OPIGUAL: ('=='|'!=');
+OPLOG: ('&&'|'||');
+
+// Identificadores
+IDENT: [a-zA-Z_][a-zA-Z0-9_]*;
+
+// Comentarios y espacios
+COMENTARIO: '//' ~[\r\n]* -> skip;
+WS: [ \t\r\n]+ -> skip;

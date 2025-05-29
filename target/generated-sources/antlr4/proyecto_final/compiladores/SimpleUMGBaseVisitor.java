@@ -1,8 +1,6 @@
 // Generated from proyecto_final\compiladores\SimpleUMG.g4 by ANTLR 4.5.1
 package proyecto_final.compiladores;
 
-package proyecto_final.compiladores;
-
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**

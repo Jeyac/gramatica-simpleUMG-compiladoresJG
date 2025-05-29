@@ -1,1 +1,13 @@
-hello world
+lib int sumar(int a, int b)
+
+programa int MiPrograma {
+    int x
+
+    x = sumar(5 3);
+
+    if x > 5 {
+        x = x + 1;
+    }
+
+    return x
+}
