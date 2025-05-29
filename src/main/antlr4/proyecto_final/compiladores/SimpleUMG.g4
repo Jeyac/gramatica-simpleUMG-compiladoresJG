@@ -58,3 +58,15 @@ FLOAT_NUM: [0-9]+ '.' [0-9]+;
 BOOLEANO: 'true' | 'false';
 CADENA: '"' .*? '"';
 
+// Palabras reservadas
+INT: 'int';
+FLOAT: 'float';
+BOOL: 'bool';
+STRING: 'string';
+PROGRAMA: 'programa';
+LIB: 'lib';
+IF: 'if';
+ELSE: 'else';
+WHILE: 'while';
+RETURN: 'return';
+
